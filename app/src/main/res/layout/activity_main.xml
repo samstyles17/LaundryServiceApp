@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/appbg"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="384dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="-50dp"
+        android:contentDescription="logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="341dp"
+        android:layout_height="465dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="474dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="100dp"
+            android:paddingStart="120dp"
+            android:background="@color/blue"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="256dp">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:contentDescription="login_button"
+                android:layout_marginRight="25dp"
+                android:backgroundTint="@color/blue2"
+                android:text="CLICK TO LOGIN" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup_button"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue2"
+                android:contentDescription="signup_button"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+
+                android:text="CLICK TO SIGNUP" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="70dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Help"
+                android:backgroundTint="@color/blue2"
+                app:srcCompat="@android:drawable/ic_menu_help" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ratings"
+    android:background="@drawable/appbg"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="93dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="250dp"
+        android:background="@drawable/custom_menu_icon"
+        android:contentDescription="Go to Login Page"
+        android:onClick="gotoHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="229dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/aref_ruqaa_bold"
+        android:text="Please rate us on each of our services"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/washcard"
+        android:layout_width="206dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="140dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/washImage"
+            android:layout_width="135dp"
+            android:layout_height="132dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/laundry"
+            android:onClick="washRating"
+            android:contentDescription="drywashing"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ironcard"
+        android:layout_width="206dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="@+id/washcard"
+        app:layout_constraintStart_toStartOf="@+id/washcard"
+        app:layout_constraintTop_toBottomOf="@+id/washcard">
+
+        <ImageView
+            android:id="@+id/ironImage"
+            android:layout_width="132dp"
+            android:layout_height="133dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/iron"
+            android:contentDescription="Ironing"
+            android:onClick="ironRating" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/drycard"
+        android:layout_width="201dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="@+id/ironcard"
+        app:layout_constraintStart_toStartOf="@+id/ironcard"
+        app:layout_constraintTop_toBottomOf="@+id/ironcard">
+
+        <ImageView
+            android:id="@+id/dryImage"
+            android:layout_width="140dp"
+            android:layout_height="136dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/dry"
+            android:contentDescription="dry wash"
+            android:onClick="dryRating" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

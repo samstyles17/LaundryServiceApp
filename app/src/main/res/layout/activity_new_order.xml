@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".NewOrder"
+    tools:ignore="HardcodedText"
+    android:background="@drawable/appbg">
+
+
+
+    <TextView
+        android:id="@+id/caption2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the type of wash"
+        android:fontFamily="@font/aref_ruqaa_bold"
+        android:layout_marginTop="0dp"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
+        android:layout_width="220dp"
+        android:layout_height="76dp"
+        android:layout_below="@+id/caption2"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="25dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_below="@+id/imageSwitcher"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="220dp"
+        app:srcCompat="@android:drawable/ic_media_next"
+        android:contentDescription="next"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_below="@+id/imageSwitcher"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="120dp"
+        app:srcCompat="@android:drawable/ic_media_previous"
+        android:contentDescription="prevbious"/>
+
+    <TextView
+        android:id="@+id/caption3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the weight of clothes"
+        android:fontFamily="@font/aref_ruqaa_bold"
+        android:layout_below="@+id/floatingActionButton"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caption3"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:max="20"
+        android:progress="0"
+        />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="30dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+
+        android:backgroundTint="@color/blue2"
+        android:layout_below="@id/selectedDateTimeTextView"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="80dp"
+        android:text="FINSIH" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable SMS Notifications"
+        android:layout_below="@+id/weight"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="25dp"/>
+
+    <Switch
+        android:id="@+id/instantDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/checkBox"
+        android:layout_marginTop="30dp"
+        android:text="Instant Delivery"
+        android:layout_marginLeft="150dp"/>
+
+    <TextView
+        android:id="@+id/selectedDateTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Selected Date and Time"
+        android:textStyle="bold"
+        android:layout_below="@+id/instantDelivery"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pickDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectedDateTimeTextView"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="75dp"
+        android:backgroundTint="@color/blue2"
+        android:text="PICK DATE" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pickTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="245dp"
+        android:backgroundTint="@color/blue2"
+        android:layout_below="@id/selectedDateTimeTextView"
+        android:layout_marginTop="30dp"
+        android:text="PICK TIME" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/notifyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="41dp"
+        android:layout_below="@id/pickTimeButton"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/finish"
+        android:backgroundTint="@color/blue2"
+        android:text="NOTIFY" />
+
+
+</RelativeLayout>
